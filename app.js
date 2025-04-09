@@ -6,6 +6,13 @@ function sortear(){
     
     let sorteados = [];
     let numero;
+
+    //proteção do valores inseridos
+    if (de > ate) {
+        alert(`O valor do numero inicial: ${de} é maior que o numero final ${ate}`);
+        reiniciar();
+        return;
+    } 
     
     for (let i = 0; i < quantidade; i++) {
         numero = obterNumeroAleatorio(de, ate);
